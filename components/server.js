@@ -101,8 +101,8 @@ app.put('/bill/:id', async (req, res) => {
 
 app.post('/add', async (req, res) => {
   try {
-    const { image, heading, detail, price, category, subCategory } = req.body;
-    const newAdd = new Add({ image, heading, detail, price, category, subCategory });
+    const { image, heading, detail, price, category } = req.body;
+    const newAdd = new Add({ image, heading, detail, price, category });
     await newAdd.save();
     res.status(201).json(newAdd);
   } catch (error) {

@@ -6,7 +6,6 @@ const addScheme = new mongoose.Schema({
   detail: String,
   price: String,
   category: String,
-  subCategory: String,
 });
 
 const Add = mongoose.model('Add', addScheme);
